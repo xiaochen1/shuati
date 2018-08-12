@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Find The Parity Outlier</title>
+	</head>
+	<body>
+		
+		
+		
+		
+		<script>
+			
+			function findOutlier(arr) {
+				if(arr.length == 0){return null;}
+				var odds = [], evens = [];
+				for(var i=0; i<arr.length; i++) {					
+					arr[i] % 2 == 0 ? odds.push(arr[i]) : evens.push(arr[i]);	
+					if(odds.length >=2 && evens.length ==1) {
+						return evens[0];
+					}
+					if( odds.length ==1 && evens.length >= 2 ) {
+						return  odds[0];
+					}
+					console.log(odds, evens);
+				}
+				
+				
+			}
+			
+//			var result = findOutlier([2, 4, 0, 100, 4, 11, 2602, 36]);
+//			var result = findOutlier([160, 3, 1719, 19, 11, 13, -21]);
+			var result = findOutlier([0,1,2]);
+			console.log(result);
+		</script>
+	</body>
+</html>

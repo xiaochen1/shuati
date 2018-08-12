@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Find The Parity Outlier</title>
+	</head>
+	<body>
+		
+		
+		
+		
+		<script>
+			
+			/*function spinWords(str) {
+				console.log(str.length);
+				var temparr = str.split(" ");
+				for(var i=0;i<temparr.length; i++){
+					if(temparr[i].length >= 5){
+						temparr[i] = temparr[i].split("").reverse().join("");
+
+					}
+					console.log(temparr[i].length);
+				}	
+				console.log(temparr);
+				console.log(temparr.join(" ").length);
+				return temparr.join(" ");
+
+//			
+			}
+			
+			spinWords('Hey fellow    hello  world           warriors');*/
+			
+			// 方法二
+			function spinWords(str) {
+				console.log(str);
+				console.log(str.length);
+				str = str.replace(/(\s){0,}([a-zA-Z]){5,}/gi,  function($1){
+					var temp = $1.replace(/([a-zA-Z]{5,})/, function($a){
+//						console.log($a);
+//						console.log($a.split("").reverse().join(""));
+						return $a.split("").reverse().join("");
+					});
+					return temp;
+				});
+				console.log(str);
+				return str;
+			}
+			
+			spinWords('Hey fellow    hello  world           warriors');
+			
+			
+			
+		</script>
+	</body>
+</html>
