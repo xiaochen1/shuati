@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数组1中元素是否是数组2中元素的子串</title>
+	</head>
+	<body>
+		
+		
+		
+		
+		
+		<script>
+			//方法一： 传统方法， filter()过滤，  some()判断数组中是否有符合要求的元素
+/*
+			var arr1 = ["live", "strong","arm"];
+			var arr2 = ["lively", "alive", "harp", "sharp", "armstrong"];
+			
+			function inarray(array1, array2){
+				var resultArr = array1.filter(function(value1, index1) {
+					var flag = array2.some(function(value2, index2) {
+						console.log(value2);
+//						console.log(value1, value2, value2.indexOf(value1));
+
+//						return value2.includes(value1);
+						return value2.indexOf(value1) >=0;
+					});
+//					console.log("---------------value:"+value1+";    flag: "+flag);
+					return flag ;	
+				});
+				console.log(resultArr);				
+				return resultArr.sort();
+			}
+				
+			inarray(arr1, arr2);
+			*/
+
+
+
+			// es6语法实现
+			/*const inArray=(a,b)=>a.filter(x=>b.some(y=>y.includes(x))).sort();
+			var arr1 = ["live", "strong","bbb"];
+			var arr2 = ["lively", "alive", "harp", "sharp", "ardmstrong"];
+			console.log(inArray(arr1, arr2));*/
+			
+			
+			console.log("ardmstrong".includes("tro"));
+			
+
+			
+			
+
+			
+		</script>
+	</body>
+</html>

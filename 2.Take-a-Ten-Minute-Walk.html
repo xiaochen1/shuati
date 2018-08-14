@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>回到原点</title>
+	</head>
+
+	<body>
+
+		<script>
+			function isValidWalk(walk) {
+				//insert brilliant code here
+				if(walk.length != 10) {
+					return false
+				}
+				var position = {
+					x: 0,
+					y: 0
+				};
+				walk.filter(function(value) {
+					switch(value) {
+						case 'e':
+							position.x++;
+							break;
+						case 'w':
+							position.x--;
+							break;
+						case 'n':
+							position.y++;
+							break;
+						case 's':
+							position.y--;
+							break;
+					}
+
+				});
+				console.log(position);
+				if(position.x == 0 && position.y == 0) {
+					return true
+				} else {
+					return false;
+					
+				}
+
+			}
+			
+			console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']));;
+		</script>
+	</body>
+
+</html>
