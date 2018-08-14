@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Create Phone Number</title>
+	</head>
+
+	<body>
+
+		<script>
+			// 十个数字的数组组成任意电话号码
+//			function createPhoneNumber(numbers) {
+//				var temp = [];
+//				while(numbers.length > 0) {
+//					temp.push(numbers.splice(parseInt(Math.random() * numbers.length), 1)[0]);
+//				}
+//				
+//				return "("+temp.slice(0,3).join("")+")"+" "+temp.slice(3,6).join("")+"-"+temp.slice(6).join("");
+//				console.log(temp);
+//			}
+			
+			//固定格式的电话号码
+//			function createPhoneNumber(numbers) {					
+//				return "("+numbers.slice(0,3).join("")+")"+" "+numbers.slice(3,6).join("")+"-"+numbers.slice(6).join("");
+//
+//			}
+			
+			function createPhoneNumber(numbers) {
+				var format = "(xxx) xxx-xxxx";
+				for(var i=0; i<numbers.length; i++){
+					format = format.replace('x', numbers[i]);
+				}
+				
+				return format;
+			}
+			
+			
+			
+			console.log(createPhoneNumber([0,1,2,3,4,5,6,7,8,9])); // (012) 345-6789
+		</script>
+	</body>
+
+</html>

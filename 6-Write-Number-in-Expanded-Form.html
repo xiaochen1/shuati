@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<script>
+			function expandedForm(num) {
+				// Your code here
+				var temp = num.toString().split("").reverse();
+				for(var i=0 ; i<temp.length; i++){
+					temp[i] = temp[i] * Math.pow(10, i);
+				}
+				console.log(temp);
+				
+				temp = temp.filter(function(value){return value > 0});
+				console.log(temp);
+				
+				console.log(temp.reverse().join(" + "));
+				return temp.reverse().join(" + ");
+
+			}
+			
+			expandedForm(70304);
+		</script>
+	</body>
+
+</html>
